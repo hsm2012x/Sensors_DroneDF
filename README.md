@@ -5,11 +5,11 @@ Overview
 This repository contains MATLAB scripts and sample datasets for estimating the Angle-of-Arrival (AoA) of drone signals using a single-channel Software-Defined Radio (SDR) and a switched-beam antenna system. The system eliminates the need for a multi-channel receiver by time-division switching between six directional antennas.
 
 Key Features:
-✅ Uses a single SDR for direction finding
-✅ Processes wideband, burst-mode OFDM signals
-✅ Handles UDP-based asynchronous switching for real-time processing
-✅ Applies a power-based estimation method for angle calculation
-✅ Provides visualization tools (Boxplots, Scatter plots) to analyze estimation errors
+✅ Uses a single SDR for direction finding   
+✅ Processes wideband, burst-mode OFDM signals   
+✅ Handles UDP-based asynchronous switching for real-time processing   
+✅ Applies a power-based estimation method for angle calculation   
+✅ Provides visualization tools (Boxplots, Scatter plots) to analyze estimation errors   
 
 0. Please download from the link : 
 
@@ -36,12 +36,12 @@ antennaConfigs = {
     6, 300, 'dataset_cwsingnal/ant6.mat', 1015;
 };
 ```
-Each dataset (antX.mat) contains IQ samples collected at 10 MHz.
-The Time Shift parameter corrects timing offsets caused by UDP-based asynchronous switching.
+Each dataset (antX.mat) contains IQ samples collected at 10 MHz.   
+The Time Shift parameter corrects timing offsets caused by UDP-based asynchronous switching.   
 
 2. Data Synchronization & Processing
 🔹 Step 1: Load RF Data
-Each antenna’s IQ data is loaded, and signal magnitude is computed:
+Each antenna’s IQ data is loaded, and signal magnitude is computed:   
 
 ```[matlab]
 load(config.filename); % Load I1, Q1
@@ -56,8 +56,8 @@ Magslice = Mag(config.shift : sampling_index + config.shift - 1);
 Magslice = reshape(Magslice, SamplesPerSegment, []);
 ```
 
-🔹 Step 3: Angle Estimation Algorithm
-For each switching period, received power is aggregated, and angle is estimated:
+🔹 Step 3: Angle Estimation Algorithm   
+For each switching period, received power is aggregated, and angle is estimated:   
 
 ```[matlab]
 Direction = zeros(6, index);
@@ -69,7 +69,7 @@ for i = 1:index
     end
 end
 ```
-The direction vector is computed, and the estimated angle is extracted:
+The direction vector is computed, and the estimated angle is extracted:   
 
 ```[matlab]
 reA = Direction .* repmat(antenna_complex, 1, index);
