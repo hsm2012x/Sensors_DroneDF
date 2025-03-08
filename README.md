@@ -92,12 +92,13 @@ boxchart(filtered_x_groups, filtered_y_values, 'BoxFaceColor', 'blue');
 scatter(1:num_antennas, mean_values, 30, 'r', 'filled'); % Mean values (Red)
 scatter(1:num_antennas, median_values, 30, 'b', 'filled'); % Median values (Blue)
 ```
-
-📈 Figure 2: Scatter Plot of Angle Errors
-This scatter plot visualizes angle errors across multiple test cases:
+![Drone DF result](result_figure/DF_boxchar_drones.jpg)   
+📈 Figure 2: Scatter Plot of Angle Errors   
+This scatter plot visualizes angle errors across multiple test cases:   
 ```[matlab]
 scatter(x_range, y_values, 20, colors(i, :), 'x');
 ```
+![Drone DF scatter](result_figure/DF_error_drones.jpg)   
 📌 Goal: Observe error trends (e.g., packet loss causes larger errors).
 
 4. How to Run the Code
