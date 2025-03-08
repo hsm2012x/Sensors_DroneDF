@@ -4,7 +4,7 @@ Drone Angle-of-Arrival Estimation Using Switched-Beam Antenna and Single-Channel
 Overview
 This repository contains MATLAB scripts and sample datasets for estimating the Angle-of-Arrival (AoA) of drone signals using a single-channel Software-Defined Radio (SDR) and a switched-beam antenna system. The system eliminates the need for a multi-channel receiver by time-division switching between six directional antennas.
 
-Key Features:
+Key Features:   
 ✅ Uses a single SDR for direction finding   
 ✅ Processes wideband, burst-mode OFDM signals   
 ✅ Handles UDP-based asynchronous switching for real-time processing   
