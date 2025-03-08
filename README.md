@@ -118,16 +118,16 @@ cd Drone-AoA-Estimation
 - Results will be displayed in Figure 1 & Figure 2.
 
 5. Data Availability & License
-The full raw RF dataset is large (10 MHz sampled data).
-Due to size limitations, a processed subset will be shared upon request.
-This repository follows the MIT License.
-📌 Next Steps
- Refine UDP synchronization method
- Improve angle interpolation accuracy
- Optimize visualization scripts
- Support real-time processing (future work)
+The full raw RF dataset is large (10 MHz sampled data).   
+Due to size limitations, a processed subset will be shared upon request.   
+This repository follows the MIT License.   
+📌 Next Steps   
+ Refine UDP synchronization method   
+ Improve angle interpolation accuracy   
+ Optimize visualization scripts   
+ Support real-time processing (future work)   
 
-6. Contact
-For inquiries or data requests, please contact:
-📧 Han Sumin (sumin@example.com)
-📧 Prof. Byung-Jun Jang (bjjang@kookmin.ac.kr)
+6. Contact   
+For inquiries or data requests, please contact:   
+📧 Han Sumin (sumin@example.com)   
+📧 Prof. Byung-Jun Jang (bjjang@kookmin.ac.kr)   
