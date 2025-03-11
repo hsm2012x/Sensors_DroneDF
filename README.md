@@ -17,13 +17,13 @@ https://drive.google.com/file/d/1PB07MMl8r5h0GzDXGAFUk6oITfoGm47i/view?usp=shari
 https://drive.google.com/file/d/129WCWBmbbv_gtetFwnx8t8vkOO6htp47/view?usp=sharing
 
 
-1. Data Structure & Configuration
+1. Data Structure & Configuration   
 The system operates with six directional antennas arranged in a circular array. Each antenna captures RF signals using an SDR with the following configuration:
 
-Sampling Rate: 10 MHz
-Switching Period (Tsw): 100 µs
-Samples per switch (SamplesPerSwitch): 10 MHz × 100 µs = 1000 samples
-📌 Antenna Data Configuration (Example for CW Signal)
+Sampling Rate: 10 MHz   
+Switching Period (Tsw): 100 µs   
+Samples per switch (SamplesPerSwitch): 10 MHz × 100 µs = 1000 samples   
+📌 Antenna Data Configuration (Example for CW Signal)   
 
 ```[matlab]
 antennaConfigs = {
@@ -39,8 +39,8 @@ antennaConfigs = {
 Each dataset (antX.mat) contains IQ samples collected at 10 MHz.   
 The Time Shift parameter corrects timing offsets caused by UDP-based asynchronous switching.   
 
-2. Data Synchronization & Processing
-🔹 Step 1: Load RF Data
+2. Data Synchronization & Processing   
+🔹 Step 1: Load RF Data   
 Each antenna’s IQ data is loaded, and signal magnitude is computed:   
 
 ```[matlab]
@@ -48,8 +48,8 @@ load(config.filename); % Load I1, Q1
 Mag = I1.^2 + Q1.^2; % Compute power
 ```
 
-🔹 Step 2: UDP Synchronization Correction
-Since UDP-based switching introduces timing drift, manual adjustments may be needed to ensure correct alignment:
+🔹 Step 2: UDP Synchronization Correction   
+Since UDP-based switching introduces timing drift, manual adjustments may be needed to ensure correct alignment:   
 
 ```[matlab]
 Magslice = Mag(config.shift : sampling_index + config.shift - 1);
