@@ -130,5 +130,5 @@ This repository follows the MIT License.
 
 6. Contact   
 For inquiries or data requests, please contact:   
-📧 Han Sumin (sumin@example.com)   
+📧 Han Sumin (hsm2005x@kookmin.ac.kr)   
 📧 Prof. Byung-Jun Jang (bjjang@kookmin.ac.kr)   
